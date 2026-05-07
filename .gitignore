@@ -1,65 +1,96 @@
-# Byte-compiled / optimized / DLL files
+# =============================================================================
+# Datasets and experiment outputs — STRICTLY NEVER committed.
+# =============================================================================
+*.csv
+*.tsv
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.sqlite
+*.sqlite3
+*.db
+
+# Experiment / report outputs (locally generated when running campaigns)
+results/
+data/
+report-data/
+experiment-data/
+tmp/
+
+# =============================================================================
+# Documents and papers — not part of the public artifact.
+# =============================================================================
+*.pdf
+*.docx
+*.pptx
+documents/
+
+# =============================================================================
+# Python build / runtime artifacts.
+# =============================================================================
 __pycache__/
 *.py[cod]
 *$py.class
-*.so
-
-# Distribution / packaging
-build/
-dist/
 *.egg-info/
 .eggs/
+build/
+dist/
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.dmypy.json
+.pyre/
+.ruff_cache/
+*.cover
+nosetests.xml
+coverage.xml
 
 # Virtual environments
 .venv/
 venv/
 env/
+ENV/
 .env
-.python-version
+.envrc
 
-# Jupyter
-.ipynb_checkpoints/
-
-# Testing / coverage
-.pytest_cache/
-.coverage
-htmlcov/
-.tox/
-.mypy_cache/
-.ruff_cache/
-
-# IDE
+# =============================================================================
+# Editor / OS / IDE.
+# =============================================================================
 .vscode/
 .idea/
 *.swp
 *.swo
-
-# OS
+*~
 .DS_Store
 Thumbs.db
+.claude/
+CLAUDE.md
 
-# Experiment artifacts (large; do not commit)
-runs/
-logs/
-checkpoints/
-wandb/
-outputs/
-*.ckpt
-*.pt
-*.pth
-*.bin
-*.safetensors
+# =============================================================================
+# Git LFS / large generated artifacts.
+# =============================================================================
+*.log
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.bz2
 
-# Data (download via scripts; do not commit raw data)
-data/raw/
-data/processed/
-*.csv
-*.parquet
-*.tsv
-*.jsonl
-!configs/**/*.json
-!configs/**/*.jsonl
-
-# SLURM
-slurm-*.out
-*.err
+# =============================================================================
+# FuzzBench runtime state.
+# =============================================================================
+fuzzbench/.venv/
+fuzzbench/configs/local-experiment.yaml
+fuzzbench/configs/experiment-data/
+fuzzbench/.local-experiments/
+fuzzbench/build_logs/
+fuzzbench/work/
